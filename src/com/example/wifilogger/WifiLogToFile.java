@@ -38,7 +38,7 @@ public class WifiLogToFile implements Runnable {
 		while(letRun) {	
 			getScanningResults();
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(500);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -56,6 +56,7 @@ public class WifiLogToFile implements Runnable {
 					if (filterEduRoamP && !m_wholeList.get(i).SSID.equals("eduroam"))
 						continue;
 					writeSSIDandStrength(m_wholeList.get(i).SSID,
+							m_wholeList.get(i).BSSID,
 							m_wholeList.get(i).level);
 			}
 		}
@@ -63,8 +64,8 @@ public class WifiLogToFile implements Runnable {
 		}
 	}
 	
-	private void writeSSIDandStrength(String SSID, int Level) {
-		writeToFile(SSID + "," + String.valueOf(Level) + "\r\n");
+	private void writeSSIDandStrength(String SSID, String BSSID, int Level) {
+		writeToFile(SSID + "," + BSSID + "," + String.valueOf(Level) + "\r\n");
 	}
 	 private void writeToFile(String stringToWrite) {
 	    	try {
@@ -110,7 +111,7 @@ public class WifiLogToFile implements Runnable {
 		m_wifiManager=(WifiManager)context.getSystemService(Context.WIFI_SERVICE);
 		m_wifiList=new ArrayList<ScanResult>();
 		openOutputFile(room_number);
-		writeToFile("Mac_Addr,Strength\r\n");
+		writeToFile("SSID,Mac_Addr,Strength\r\n");
 		letRun = true;
 	}
  	
