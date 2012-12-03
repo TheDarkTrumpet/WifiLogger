@@ -50,12 +50,16 @@ public class WifiLogger extends Activity {
     		isRunning = true;
     		Toast.makeText(WifiLogger.this,"Beginning logging on room "+room_number.getText(), Toast.LENGTH_SHORT).show();
     		statusText.setText("Logging Started, file: " + c.getFile());
+    		room_number.setEnabled(false);
+    		filterEduRoam.setEnabled(false);
     		editText.setText("Stop Logging");
     	} else if (editText.getText().equals("Stop Logging")) {
     		isRunning = false;
     		c.stop();
     		Toast.makeText(WifiLogger.this, "Logging Stopped...", Toast.LENGTH_SHORT).show();
     		statusText.setText("Logging Stopped");
+    		room_number.setEnabled(true);
+    		filterEduRoam.setEnabled(true);
     		editText.setText("Start Logging");
     	}
     	InputMethodManager imm = (InputMethodManager)getSystemService(
