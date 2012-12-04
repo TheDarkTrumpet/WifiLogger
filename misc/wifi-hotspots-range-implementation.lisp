@@ -20,16 +20,18 @@
   (let ((mac-addr-db '()))
     (with-open-file (f file :direction :input) 
       (loop for l = (read-line f nil nil)
-	    for l-split = (split "\\\t" l)
-	    for mac-addr = (first l-split)
-	    for signal-str = (second l-split)
+	    for l-split = (split "," l)
+	    for ssid = (first l-split)
+	    for mac-addr = (second l-split)
+	    for signal-str = (third l-split)
 	    while l
-	    do
-	       (if (null (cdr (assoc mac-addr mac-addr-db :test #'string-equal)))
-		   (push (cons mac-addr (list (abs (read-from-string signal-str))))
-			 mac-addr-db)
-		   (push (abs (read-from-string signal-str))
-			 (cdr (assoc mac-addr mac-addr-db :test #'string-equal))))))
+	    when (not (scan "^SSID,Mac_Addr,Strength.*" l))
+	      do
+		 (if (null (cdr (assoc mac-addr mac-addr-db :test #'string-equal)))
+		     (push (cons mac-addr (list (abs (read-from-string signal-str))))
+			   mac-addr-db)
+		     (push (abs (read-from-string signal-str))
+			   (cdr (assoc mac-addr mac-addr-db :test #'string-equal))))))
     mac-addr-db))
 
 (defun load-assoc-files (filelist)
