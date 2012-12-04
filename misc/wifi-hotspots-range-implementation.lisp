@@ -72,19 +72,11 @@ we'll return an ALIST such that it's:
 		   new-room-alist))
     new-room-alist))
 
-;;;; MBA
-;; (defvar *room-alist-data-store*
-;;   '(("4505" . "/Users/dthole/programming/22C196-MoteProject/WifiLocator/misc/MidtermPresentation/data/wifiData_4505.reformatted.csv")
-;;     ("4511" . "/Users/dthole/programming/22C196-MoteProject/WifiLocator/misc/MidtermPresentation/data/wifiData_4511.reformatted.csv)
-;;     ("4th-floor-hallway" . "/Users/dthole/programming/22C196-MoteProject/WifiLocator/misc/MidtermPresentation/data/wifiData_hallwayreformatted.csv")))
-;; 
-
-;;;; Laptop
 (defvar *room-alist-data-store*
-    '(("4505" . "/home/dthole/programming/22C196-MoteProject/WifiLocator/misc/MidtermPresentation/data/wifiData_4505.reformatted.csv")
-      ("4511" . "/home/dthole/programming/22C196-MoteProject/WifiLocator/misc/MidtermPresentation/data/wifiData_4511.reformatted.csv")
-      ("4th-floor-hallway" . "/home/dthole/programming/22C196-MoteProject/WifiLocator/misc/MidtermPresentation/data/wifiData_hallway.reformatted.csv")))
- 
+  '(("219JH" . "/mnt/data.temporary/WifiLogger_Trace_Files/219jh.2012.12.03_07.50.27.csv")
+    ("221JH" . "/mnt/data.temporary/WifiLogger_Trace_Files/221jh.2012.12.03_07.48.51.csv")
+    ("248JH" . "/mnt/data.temporary/WifiLogger_Trace_Files/248jh.2012.12.03_07.44.35.csv")
+    ("JH-2-HALL" . "/mnt/data.temporary/WifiLogger_Trace_Files/jh2ndhall.2012.12.03_07.46.49.csv")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Classification Options ;;;;;
