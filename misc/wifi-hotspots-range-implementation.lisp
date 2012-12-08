@@ -74,11 +74,22 @@ we'll return an ALIST such that it's:
 		   new-room-alist))
     new-room-alist))
 
-(defvar *room-alist-data-store*
+(setf *room-alist-data-store*
   '(("219JH" . "/mnt/data.temporary/WifiLogger_Trace_Files/219jh.2012.12.03_07.50.27.csv")
     ("221JH" . "/mnt/data.temporary/WifiLogger_Trace_Files/221jh.2012.12.03_07.48.51.csv")
     ("248JH" . "/mnt/data.temporary/WifiLogger_Trace_Files/248jh.2012.12.03_07.44.35.csv")
-    ("JH-2-HALL" . "/mnt/data.temporary/WifiLogger_Trace_Files/jh2ndhall.2012.12.03_07.46.49.csv")))
+    ("JH-2-HALL" . "/mnt/data.temporary/WifiLogger_Trace_Files/jh2ndhall.2012.12.03_07.46.49.csv")
+    ("4517SC" . "/mnt/data.temporary/WifiLogger_Trace_Files/4517sc.2012.12.07_16.44.27.csv")
+    ("5309SC" . "/mnt/data.temporary/WifiLogger_Trace_Files/5309SC.2012.12.08_15.37.22.csv")
+    ("5315SC" . "/mnt/data.temporary/WifiLogger_Trace_Files/5315SC.2012.12.08_15.39.15.csv")
+    ("5317SC" . "/mnt/data.temporary/WifiLogger_Trace_Files/5317SC.2012.12.08_15.33.27.csv")
+    ("5309SC" . "/mnt/data.temporary/WifiLogger_Trace_Files/5309SC.2012.12.08_15.37.22.csv")
+    ("SC-5-HALL" . "/mnt/data.temporary/WifiLogger_Trace_Files/5thHallSC.2012.12.08_15.35.06.csv")
+    ("5013SC" . "/mnt/data.temporary/WifiLogger_Trace_Files/5013SC.2012.12.08_16.07.53.csv")
+    ("5020SC" . "/mnt/data.temporary/WifiLogger_Trace_Files/5020SC.2012.12.08_16.03.47.csv")
+    ("5312SC" . "/mnt/data.temporary/WifiLogger_Trace_Files/5312SC.2012.12.08_16.02.16.csv")
+    ("5316SC" . "/mnt/data.temporary/WifiLogger_Trace_Files/5316SC.2012.12.08_16.01.11.csv")
+    ("5318SC" . "/mnt/data.temporary/WifiLogger_Trace_Files/5318SC.2012.12.08_16.00.04.csv")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Classification Options ;;;;;
